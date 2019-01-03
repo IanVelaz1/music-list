@@ -1,0 +1,44 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="music-list">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <div class="listContainer">
+      
+    </div>
+  </template>
+
+  <script>
+    /**
+     * `music-list`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class MusicList extends Polymer.Element {
+      static get is() { return 'music-list'; }
+      static get properties() {
+        return {
+          songsList:{
+            type:Array,
+            value(){
+              return []
+            }
+          },
+          filterArgument:{
+            type:String,
+            value:""
+          }
+        };
+      }
+    }
+
+    window.customElements.define(MusicList.is, MusicList);
+  </script>
+</dom-module>
