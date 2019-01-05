@@ -19,22 +19,18 @@
       </template>
     </test-fixture>
 
-    <test-fixture id="ChangedPropertyTestFixture">
-      <template>
-        <music-list prop1="new-prop1"></music-list>
-      </template>
-    </test-fixture>
 
     <script>
       suite('music-list', () => {
+       test("fires-selected-song",function(done){
         let listElement=fixture("testEvent");
-       test("fires-selected-song",function(event){
         listElement.addEventListener("song-selected",(event)=>{
           assert.equal(event.detail,"");
           done();
         });
+        listElement.selectSong({model:{song:""}});
        });
-       listElement.selectSong();
+      
       });
     </script>
 
