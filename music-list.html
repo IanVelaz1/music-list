@@ -26,7 +26,7 @@
         font-weight: bold;
       }
     </style>
-    <iron-ajax id="musicRequest" method="get" url="http://localhost:8000/tracks" handle-as="json" on-response="songsRecovered" on-error="errorSongs" auto>
+    <iron-ajax id="musicRequest" method="get" url="[[requestUrl]]" handle-as="json" on-response="songsRecovered" on-error="errorSongs" auto>
     </iron-ajax>
     <div class="listContainer" hidden$="[[hiddenList]]">
         <dom-repeat items="[[songsList]]" as="song" filter="{{filterSongs(filterArgument)}}">
