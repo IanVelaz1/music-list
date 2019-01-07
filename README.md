@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/jusolete/music-list.svg?branch=master)](https://travis-ci.com/jusolete/music-list)
 # \<music-list\>
 
 
